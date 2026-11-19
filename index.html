@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlgebraAssist</title>
+<meta name="description" content="Algebra assistance provided by an experienced math teacher and tutor.">
+<style>
+  :root { --bg:#1a1030; --card:#2a1b4d; --accent:#c084fc; --accent2:#818cf8; --text:#f3e8ff; --muted:#b8a6d9; --border:#4c3a7a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  nav { position:fixed; top:0; width:100%; display:flex; justify-content:space-between; align-items:center;
+        flex-wrap:wrap; gap:8px; padding:16px 6vw; background:rgba(26,16,48,.85); backdrop-filter:blur(8px); z-index:10; }
+  .logo { font-weight:800; letter-spacing:1px; }
+  .logo span { color:var(--accent); }
+  nav ul { display:flex; gap:24px; list-style:none; }
+  nav a { color:var(--muted); text-decoration:none; transition:color .2s; }
+  nav a:hover { color:var(--accent); }
+  .hero { position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:center;
+          align-items:center; text-align:center; padding:90px 6vw 0; overflow:hidden;
+          background:radial-gradient(circle at 50% 30%, #3b1f6e 0%, var(--bg) 65%); }
+  .hero h1 { font-size:clamp(2.5rem,8vw,5.5rem); font-weight:900; position:relative; z-index:1; }
+  .hero h1 span { background:linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .hero p { max-width:560px; margin:20px 0 32px; color:var(--muted); font-size:1.15rem; position:relative; z-index:1; }
+  .btn { display:inline-block; padding:14px 32px; border:0; border-radius:999px; cursor:pointer; font-size:1rem; font-weight:600;
+         background:linear-gradient(90deg,var(--accent),var(--accent2)); color:#1a1030; text-decoration:none; position:relative; z-index:1;
+         transition:transform .2s, box-shadow .2s; }
+  .btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(192,132,252,.4); }
+  .btn:disabled { opacity:.6; cursor:wait; }
+  .sym { position:absolute; color:rgba(192,132,252,.2); font-weight:700; animation:float 12s ease-in-out infinite; user-select:none; pointer-events:none; }
+  @keyframes float { 0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-30px) rotate(12deg)} }
+  @media (prefers-reduced-motion: reduce) { .sym { animation:none; } html { scroll-behavior:auto; } }
+  section { padding:100px 6vw; max-width:1100px; margin:0 auto; scroll-margin-top:70px; }
+  h2 { font-size:2.2rem; margin-bottom:36px; text-align:center; }
+  .grid { display:grid; gap:24px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+  .card { background:var(--card); padding:28px; border-radius:16px; border:1px solid var(--border); transition:transform .2s, border-color .2s; }
+  .card:hover { transform:translateY(-4px); border-color:var(--accent); }
+  .card h3 { margin-bottom:10px; color:var(--accent); }
+  .card p { color:var(--muted); }
+  .rate { text-align:center; color:var(--accent); font-weight:600; margin-bottom:24px; }
+  form { background:var(--card); padding:32px; border-radius:16px; border:1px solid var(--border); display:grid; gap:18px; max-width:620px; margin:0 auto; }
+  label { font-size:.9rem; font-weight:600; display:block; margin-bottom:6px; }
+  input[type=text], input[type=email], input[type=tel], select {
+    width:100%; padding:12px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text); font-size:1rem; }
+  input:focus, select:focus { outline:2px solid var(--accent); }
+  input[type=checkbox] { accent-color:var(--accent); }
+  .topics { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:8px; }
+  .topics label { font-weight:400; display:flex; gap:8px; align-items:center; margin:0; }
+  #otherText { display:none; margin-top:10px; }
+  #thanks { display:none; text-align:center; color:var(--accent); font-weight:600; }
+  .hp { position:absolute; left:-9999px; opacity:0; height:0; width:0; }
+  footer { text-align:center; padding:40px; color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">ALGEBRA<span>Assist</span></div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="home">
+  <h1>ALGEBRA<span>Assist</span></h1>
+  <p>Master algebra with personalized assistance. From equations to polynomials, I'll help you build the skills and confidence to succeed.</p>
+  <a href="#contact" class="btn">Get Started Today</a>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Experienced Algebra Tutor</h3>
+      <p>With decades of experience as a high school math teacher and tutor, I understand the challenges you face. Whether you're struggling with basic equations or advanced polynomial functions, I'm here to guide you every step of the way.</p>
+    </div>
+    <div class="card">
+      <h3>My Teaching Philosophy</h3>
+      <p>Every student can excel at math with the right approach. Sessions are tailored to your learning style, pace, and goals. We'll build confidence together, one concept at a time.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card"><h3>Pre-Algebra</h3><p>Build a strong foundation with integers, fractions, and basic equations.</p></div>
+    <div class="card"><h3>Algebra 1</h3><p>Master linear equations, inequalities, and graphing fundamentals.</p></div>
+    <div class="card"><h3>Algebra 2</h3><p>Tackle polynomials, quadratics, and complex number systems.</p></div>
+    <div class="card"><h3>Trigonometry</h3><p>Master angles, triangles, and trigonometric functions.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Get Started</h2>
+  <p class="rate">Rate for virtual assistance: $40 per 30-min session.</p>
+  <form id="form">
+    <input type="text" id="honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div><label for="name">Name *</label><input type="text" id="name" required></div>
+    <div><label for="email">Email *</label><input type="email" id="email" required></div>
+    <div><label for="phone">Phone (optional)</label><input type="tel" id="phone"></div>
+    <div>
+      <label for="grade">Grade Level *</label>
+      <select id="grade" required>
+        <option value="">Select grade level</option>
+        <option>Middle School (6-8)</option>
+        <option>High School Freshman</option>
+        <option>High School Sophomore</option>
+        <option>High School Junior</option>
+        <option>High School Senior</option>
+        <option>College</option>
+        <option>Adult Learner</option>
+      </select>
+    </div>
+    <div>
+      <label>Topics You Need Help With *</label>
+      <div class="topics">
+        <label><input type="checkbox" name="topic" value="Linear Equations"> Linear Equations</label>
+        <label><input type="checkbox" name="topic" value="Inequalities"> Inequalities</label>
+        <label><input type="checkbox" name="topic" value="Polynomials"> Polynomials</label>
+        <label><input type="checkbox" name="topic" value="Quadratic Functions"> Quadratic Functions</label>
+        <label><input type="checkbox" name="topic" value="Graphing"> Graphing</label>
+        <label><input type="checkbox" name="topic" value="Word Problems"> Word Problems</label>
+        <label><input type="checkbox" name="topic" value="Exponents & Radicals"> Exponents &amp; Radicals</label>
+        <label><input type="checkbox" name="topic" value="Other" id="otherBox"> Other</label>
+      </div>
+      <input type="text" id="otherText" placeholder="Please tell me what else you need help with">
+    </div>
+    <button class="btn" type="submit">Submit Interest</button>
+    <p id="thanks" role="status" aria-live="polite">Thanks! I'll be in touch soon.</p>
+  </form>
+</section>
+
+<footer>© 2026 AlgebraAssist. All rights reserved.</footer>
+
+<script>
+  const $ = id => document.getElementById(id);
+
+  // Floating math symbols in the hero
+  const hero = $('home');
+  'x π = + Δ ∑ √ ÷ − ∞ y ∫ % x π √ + ='.split(' ').forEach(s => {
+    const el = document.createElement('div');
+    el.className = 'sym';
+    el.textContent = s;
+    el.style.left = Math.random()*95 + '%';
+    el.style.top = Math.random()*90 + '%';
+    el.style.fontSize = (2 + Math.random()*4) + 'rem';
+    el.style.animationDelay = (-Math.random()*12) + 's';
+    hero.appendChild(el);
+  });
+
+  // Show the text box when "Other" is checked
+  const otherBox = $('otherBox');
+  const otherText = $('otherText');
+  otherBox.addEventListener('change', () => {
+    otherText.style.display = otherBox.checked ? 'block' : 'none';
+    otherText.required = otherBox.checked;
+    if (!otherBox.checked) otherText.value = '';
+  });
+
+  // Form handling: sends submissions to email via FormSubmit
+  $('form').addEventListener('submit', async e => {
+    e.preventDefault();
+    const topics = [...document.querySelectorAll('input[name=topic]:checked')].map(c => c.value);
+    if (!topics.length) { alert('Please choose at least one topic.'); return; }
+
+    const btn = e.target.querySelector('button[type=submit]');
+    const thanks = $('thanks');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    const name = $('name').value.trim();
+    const payload = {
+      _subject: 'New AlgebraAssist inquiry from ' + name,
+      _template: 'table',
+      _captcha: 'false',
+      _honey: $('honey').value,
+      Name: name,
+      Email: $('email').value.trim(),
+      Phone: $('phone').value.trim() || 'Not provided',
+      'Grade Level': $('grade').value,
+      Topics: topics.join(', '),
+      'Other topic': otherBox.checked ? otherText.value.trim() : 'N/A'
+    };
+
+    try {
+           const res = await fetch('https://formsubmit.co/ajax/fraznextacts@gmail.com', {method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error('Request failed: ' + res.status);
+      thanks.textContent = "Thanks! I'll be in touch soon.";
+      thanks.style.display = 'block';
+      e.target.reset();
+      otherText.style.display = 'none';
+    } catch (err) {
+      console.error(err);
+      thanks.textContent = 'Something went wrong. Please try again or email fraznextacts@gmail.com directly.';
+      thanks.style.display = 'block';
+    }
+    btn.disabled = false;
+    btn.textContent = 'Submit Interest';
+  });
+</script>
+</body>
+</html>
