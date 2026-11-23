@@ -38,6 +38,9 @@
   .card:hover { transform:translateY(-4px); border-color:var(--accent); }
   .card h3 { margin-bottom:10px; color:var(--accent); }
   .card p { color:var(--muted); }
+  .about-layout { display:grid; grid-template-columns:minmax(220px,320px) 1fr; align-items:center; gap:36px; }
+  .profile-photo { width:100%; aspect-ratio:1; object-fit:cover; border-radius:16px; border:2px solid var(--accent); }
+  @media (max-width:700px) { .about-layout { grid-template-columns:1fr; } .profile-photo { max-width:320px; justify-self:center; } }
   .rate { text-align:center; color:var(--accent); font-weight:600; margin-bottom:24px; }
   form { background:var(--card); padding:32px; border-radius:16px; border:1px solid var(--border); display:grid; gap:18px; max-width:620px; margin:0 auto; }
   label { font-size:.9rem; font-weight:600; display:block; margin-bottom:6px; }
@@ -72,14 +75,17 @@
 
 <section id="about">
   <h2>About Me</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Experienced Algebra Tutor</h3>
-      <p>With decades of experience as a high school math teacher and tutor, I understand the challenges you face. Whether you're struggling with basic equations or advanced polynomial functions, I'm here to guide you every step of the way.</p>
-    </div>
-    <div class="card">
-      <h3>My Teaching Philosophy</h3>
-      <p>Every student can excel at math with the right approach. Sessions are tailored to your learning style, pace, and goals. We'll build confidence together, one concept at a time.</p>
+  <div class="about-layout">
+    <img class="profile-photo" src="https://1drv.ms/i/c/3ec0a7399b4991ef/IQB6L7bx6pc7R46Jp5DQjoPCAau2aoOQ2-ENMy_UxzKbw0M?e=cKFX5z" alt="AlgebraAssist tutor profile photo">
+    <div class="grid">
+      <div class="card">
+        <h3>Experienced Algebra Tutor</h3>
+        <p>With decades of experience as a high school math teacher and tutor, I understand the challenges you face. Whether you're struggling with basic equations or advanced polynomial functions, I can help you succeed.</p>
+      </div>
+      <div class="card">
+        <h3>My Teaching Philosophy</h3>
+        <p>Every student can excel at math with the right approach. Sessions are tailored to your learning style, pace, and goals. We'll build confidence together, one concept at a time.</p>
+      </div>
     </div>
   </div>
 </section>
